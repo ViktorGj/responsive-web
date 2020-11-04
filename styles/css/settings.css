@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 26px;
+  padding: 7px 10px;
+  font-size: 12px;
+}
+
+.button-primary {
+  background-color: #ef463b;
+  color: white;
+}
+
+.button-secondary {
+  background: none;
+  color: #343a40;
+}
+
+a {
+  color: black;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.com-link {
+  color: #ef463b;
+}
+
+a:active {
+  text-decoration: underline;
+  color: #ef463b;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ef463b;
+}
+
+.font-light {
+  color: white;
+}
+
+.rounded-btn {
+  background-color: #ef463b;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 0px 8px;
+  float: right;
+  margin-right: 40px;
+  position: relative;
+  bottom: -32px;
+}
+.rounded-btn:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.center-underliner {
+  position: relative;
+}
+.center-underliner::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background: #ef463b;
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  transform: translateX(-50%);
+}
+
+.left-underliner {
+  position: relative;
+}
+.left-underliner::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background: #ef463b;
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+}
+@media (max-width: 992px) {
+  .left-underliner::after {
+    left: 15px;
+  }
+}
+
+.icon-arrow {
+  font-size: 10px;
+  padding-left: 3px;
+  display: none;
+}
+
+.button-primary:hover .icon-arrow {
+  display: inline-block;
+}
+
+.button-secondary:hover .icon-arrow {
+  display: inline-block;
+}
+
+.com-link:hover .icon-arrow {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=settings.css.map */

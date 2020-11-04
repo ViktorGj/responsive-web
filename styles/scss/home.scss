@@ -1,0 +1,418 @@
+@import 'settings.scss';
+@import 'breakpoints.scss';
+
+h3, h5 {
+    color: $light-dark;
+}
+
+.com-container {
+    padding: 0 200px;
+    @include breakpoint(xl) {
+        padding: 0 100px;
+    }
+    @include breakpoint(lg) {
+        padding: 0 15px;
+    }
+}
+
+.header {
+    margin: 10px 0px;
+}
+
+.navbar {
+    @include breakpoint(lg) {
+        justify-content: flex-end;
+        left: 100px;
+    }
+    @include breakpoint(md) {
+        width: 70%;
+    }
+    @include breakpoint(sm) {
+        width: 65%;
+    }
+    @include breakpoint(xs) {
+        width: 55%;
+    }
+}
+
+.nav {
+    justify-content: flex-end;
+}
+
+.nav > button {
+    margin-left: 2px;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    @include breakpoint(lg) {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+    .logo {
+        max-height: 40px;
+    }
+}
+
+.lang-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint(lg) {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    @include breakpoint(md) {
+        justify-content: flex-end;
+    }
+}
+
+.welcome-section {
+    background-image: url('../../assets/images/stage-company.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    height: 450px;
+    color: $light-dark;
+    @include breakpoint(md) {
+        height: 270px;
+    }
+
+    .welcome-content {
+        background-image: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0));
+        padding: 30px 50px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        @include breakpoint (lg) {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0));
+        }
+        @include breakpoint(md) {
+            padding: 15px
+        }
+        .company-description {
+            display: inline;
+            border-top: 2px solid $red;
+            @include breakpoint(sm) {
+                display: block;
+            }
+        }
+    }
+    .welcome-content button {
+        @include breakpoint(md) {
+            margin: auto;
+        }
+    }
+}
+
+
+.services {
+    padding-left: 200px;
+    height: 500px;
+    margin: 0px;
+    @include breakpoint(xl) {
+        padding-left: 100px;
+    }
+    @include breakpoint(lg) {
+        padding-left: 0;
+    }
+    @include breakpoint(sm) {
+        height: auto;
+    }
+
+    .services-nav {
+        height: 100%;
+        @include breakpoint(lg) {
+            padding: 0px;
+        }
+        @include breakpoint(xs) {
+            height: auto;
+        }
+
+        & > p {
+            @include breakpoint(lg) {
+                padding: 0 15px;
+            }
+        }
+        & > h3 {
+            @include breakpoint(lg) {
+                padding-left: 15px;
+            }
+        }
+
+        .nav {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 0px;
+            display: block;
+
+            @include breakpoint(xs) {
+                position: static;
+            }
+            & a {
+                border-radius: 0;
+            }
+        }
+    }
+
+    .nav-wrapper {
+        @include breakpoint(lg) {
+            margin-top: 20px !important;
+        } 
+
+    }
+
+
+    .nav-link.active {
+        background-color: $red;
+    }
+
+    .services-background {
+        background-image: url('../../assets/images/img-1.jpg');
+        background-repeat: no-repeat;
+        background-attachment: top fixed;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        @include breakpoint(xs) {
+            height: 300px;
+        }
+
+        .service-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+            background-color: rgba(255,255,255,0.5);
+            padding: 20px 10px;
+            @include breakpoint(md) {
+                width: 80%;
+            }
+            @include breakpoint(sm) {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.testimonials {
+    padding-left: 200px;
+    @include breakpoint(xl) {
+        padding: 0 100px;
+    }
+    @include breakpoint(lg) {
+        padding: 0 15px;
+    }
+}
+
+.testimonials-logo-container {
+    display: flex;
+    justify-content: space-evenly;
+    border-right: 1px solid #c8c6c7;
+}
+
+.short-content {
+    display: inline;
+    border-top: 2px solid $red;
+}
+
+.testimonials-content {
+    padding-right: 200px;
+    @include breakpoint(lg) {
+        padding: 0 0 0 15px;
+    }
+}
+
+.circle-logo {
+    max-width: 50%;
+}
+
+
+.products {
+    padding-right: 200px;
+    height: 500px;
+    margin: 0px;
+    @include breakpoint(xl) {
+        padding-right: 100px;
+    }
+    @include breakpoint(lg) {
+        padding-right: 0;
+    }
+    @include breakpoint(md) {
+        height: auto;
+    }
+    .products-background {
+        background-image: url('../../assets/images/img-2.jpg');
+        background-repeat: no-repeat;
+        background-attachment: top fixed;
+        background-position: center;
+        background-size: cover;
+    }
+    .product-content {
+        @include breakpoint(md) {
+            margin: 20px 0px;
+        }
+    }
+}
+
+.categories {
+    margin: 0px;
+    position: relative;
+    top: -220px;
+    @include breakpoint(md) {
+        position: static;
+    }
+    @include breakpoint(sm) {
+        padding: 0px;
+        margin-bottom: 10px;
+    }
+    .prod1 {
+        background-image: url('../../assets/images/img-2.jpg');
+        background-repeat: no-repeat;
+        background-attachment: top fixed;
+        background-position: center;
+        background-size: cover;
+    }
+    .prod2 {
+        background-image: url('../../assets/images/img-1.jpg');
+        background-repeat: no-repeat;
+        background-attachment: top fixed;
+        background-position: center;
+        background-size: cover;
+    }
+    .prod3 {
+        background-image: url('../../assets/images/img-3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: top fixed;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.category-container {
+    @include breakpoint(md) {
+        padding: 10px !important;
+    }
+    @include breakpoint(sm) {
+        padding: 0px !important;
+        margin-bottom: 10px !important;
+    }
+}
+
+.prod1, .prod2, .prod3 {
+    height: 150px;
+}
+
+.red-layer {
+    background-color: rgba($red, 0.4);
+    height: 100%;
+}
+
+.white-layer {
+    background-color: rgba(white, 0.4);
+    height: 100%;
+}
+
+.category-title {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    color: $red;
+}
+
+
+.contact {
+    margin-top: -200px;
+    @include breakpoint(md) {
+        margin: 0px;
+    }
+}
+
+.footer {
+    height: 220px;
+    background-color: $light-dark;
+    color: white;
+    padding-bottom: 20px;
+    @include breakpoint(md) {
+        height: auto;
+    }
+}
+
+.credits {
+    background-color: $dark;
+    color: white;
+}
+
+.footer-link {
+    color: white;
+    &:hover {
+        color: $red;
+    }
+}
+
+.footer-about {
+    position: relative;
+}
+
+.other-links {
+    position: absolute;
+    bottom: 0;
+    @include breakpoint(md) {
+        position: static;
+    }
+    @include breakpoint(sm) {
+        text-align: center;
+    }
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 0;
+    @include breakpoint(md) {
+        position: static;
+    }
+}
+
+.social-icons > i {
+    font-size: 16px;
+    &:hover {
+        color: $red;
+        cursor: pointer;
+    }
+}
+
+.nav-links {
+    padding-left: 100px;
+    @include breakpoint(md) {
+        padding: 0 15px;
+    }
+}
+
+.footer-about, .nav-links {
+    @include breakpoint(md) {
+        margin-bottom: 20px;
+    }
+}
+
+.footer-about, .nav-links, .footer-contact {
+    @include breakpoint(sm) {
+        text-align: center;
+    }
+}

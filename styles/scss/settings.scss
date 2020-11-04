@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'breakpoints.scss';
+
+// colors:
+$red: #ef463b;
+$light-dark: #343a40;
+$dark: #333;
+$light: #fafafa;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+button {
+    border: none;
+    border-radius: 26px;
+    padding: 7px 10px;
+    font-size: 12px;
+}
+
+.button-primary {
+    background-color: #ef463b;
+    color: white;
+}
+
+.button-secondary {
+    background: none;
+    color: $light-dark;
+}
+
+a {
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.com-link {
+    color: $red;
+}
+
+a:active {
+    text-decoration: underline;
+    color: $red;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $red;
+  }
+
+  .font-light {
+      color: white;
+  }
+
+  .rounded-btn {
+    background-color: $red;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 0px 8px;
+    float: right;
+    margin-right: 40px;
+    position: relative;
+    bottom: -32px;
+
+    &:hover {
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.center-underliner {
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 40px;
+        height: 4px;
+        background: $red;
+        position: absolute;
+        left: 50%;
+        bottom: 8px;
+        transform: translateX(-50%);
+    }
+}
+
+.left-underliner {
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 40px;
+        height: 4px;
+        background: $red;
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        @include breakpoint(lg) {
+            left: 15px;
+        }
+    }
+}
+
+.icon-arrow {
+    font-size: 10px;
+    padding-left: 3px;
+    display: none;
+}
+
+.button-primary:hover .icon-arrow {
+    display: inline-block;
+}
+
+.button-secondary:hover .icon-arrow {
+    display: inline-block;
+}
+
+.com-link:hover .icon-arrow {
+    display: inline-block;
+}
